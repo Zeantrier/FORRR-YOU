@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>I LOVE YOU</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Short+Stack&amp;family=Homemade+Apple&amp;display=swap'>
+  <link rel="stylesheet" href="card.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+  body {
+      margin: 0;
+      overflow: hidden;
+ 
+    }
+
+    video {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+    }
+    
+    content {
+      z-index: 1;
+    }
+    
+  
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&family=Rubik:wght@300;400;500;600;700;800&display=swap');
+.draggable p {
+            font-size: 16px;
+            color: #333;
+            margin-top: 5px;
+        }
+
+
+
+.draggable{
+
+  background-color: rgb(234, 229, 229);
+  top: 30%;
+  left: 40%;
+  padding: 8px 10px;
+  
+  box-shadow: 1px 15px 20px 0px rgba(0,0,0,0.5);
+  position: fixed;
+  border-radius: 20px;
+  text-align: center;
+  rotate: 3deg;
+}
+
+.draggable2 p {
+
+            font-size: 16px;
+
+            color: #333;
+            margin-top: 5px;
+        }
+
+
+
+.draggable2 {
+
+  background-color: rgb(234, 229, 229);
+  top: 30%;
+  left: 40%;
+  padding: 8px 10px;
+  rotate: -5deg;
+  box-shadow: 1px 15px 20px 0px rgba(0,0,0,0.5);
+  position: fixed;
+  border-radius: 20px;
+  text-align: center;
+}
+
+
+.draggable3 p {
+
+
+
+            font-size: 16px;
+
+            color: #333;
+            margin-top: 5px;
+        }
+
+
+
+.draggable3 {
+
+  background-color: rgb(234, 229, 229);
+  top: 30%;
+  left: 40%;
+  padding: 8px 10px;
+  rotate: 5deg;
+  box-shadow: 1px 15px 20px 0px rgba(0,0,0,0.5);
+  position: fixed;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.draggable4 p {
+
+
+
+
+
+            font-size: 16px;
+
+            color: #333;
+            margin-top: 5px;
+        }
+
+
+
+.draggable4 {
+
+  background-color: rgb(234, 229, 229);
+  top: 30%;
+  left: 40%;
+  padding: 8px 10px;
+  rotate: -3deg;
+  box-shadow: 1px 15px 20px 0px rgba(0,0,0,0.5);
+  position: fixed;
+  border-radius: 20px;
+  text-align: center;
+}
+
+
+.content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
+  color: #fff; /* Warna teks */
+}
+
+.paper.image {
+  padding: 2px;
+}
+.paper.image p {
+  font-size: 2px;
+}
+
+img {
+  max-height: 150px;
+  width: 100%;
+  user-select: none;
+}
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00e0, 0 0 70px #ff00e0, 0 0 80px #ff00e0, 0 0 100px #ff00e0, 0 0 150px #ff00e0;
+  }
+  50% {
+    text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00e0, 0 0 70px #ff00e0, 0 0 80px #ff00e0, 0 0 100px #ff00e0, 0 0 150px #ff00e0, 0 0 180px #ff00e0;
+  }
+}
+
+#lyrics {
+  position: fixed;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff; /* Warna teks sesuai kebutuhan Anda */
+}
+
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  color: rgb(0, 0, 0);
+  user-select: none;
+}
+
+
+
+  </style>
+</head>
+<body>
+  
+<video class="video-background" autoplay loop muted >
+        <source src="gokil.mp4" type="video/mp4">
+    </video>
+    
+  <div id="lyrics"></div>
+  <div class="content">
+    <h1></h1>
+    
+  </div>
+    
+<audio id="background-music" autoplay loop>
+        <source src="1.mp3" type="audio/mpeg">
+    </audio>
+
+
+
+  <div class="draggable">
+        <img src="IMG3.jpg" alt="Gambar">
+        <p>Ini Kitaaa</p>
+    </div>
+
+   <div class="draggable2" >
+        <img src="IMG2.jpg" alt="Gambar">
+        <p>Ini Lucuuuu</p>
+    </div>
+    
+<div class="draggable3" >
+        <img src="IMG1.jpg" alt="Gambar">
+        <p>Ini Cantikkkk</p>
+    </div>
+
+<div class="draggable4" >
+        <img src="IMG4.jpg" alt="Gambar">
+        <p>Ini Manissss</p>
+    </div>
+
+</body>
+
+  <script>
+    
+    
+
+let highestZ = 1;
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const lyrics = [
+    "",
+    "",
+    "",
+      "AKU TIDAK PERNAH ",
+      "MERENCANAKAN UNTUK ",
+      "JATUH CINTA PADA MU",
+      "AKU BAHKAN TIDAK ",
+      "MENYADARI KAPAN",
+      "SEMUANYA DIMULAI",
+      "TIBA TIBA SAJA KAMU",
+      "ADA DI SETIAP PIKIRAN",
+      "DAN DETAK JANTUNG KU",
+      "TERIMA KASIH TELAH",
+      "HADIR DI HIDUPKU",
+      "DESVIA ANGGUNIA PRATIWI",
+      
+  ];
+
+  const delay = 39; 
+  const lyricsElement = document.getElementById("lyrics");
+
+  async function displayLyrics() {
+      for (const line of lyrics) {
+          for (const char of line) {
+              const charElement = document.createElement("span"); 
+              charElement.textContent = char;
+              charElement.style.animation = "glow 2s ease-in-out"; 
+              charElement.style.fontSize = "30px";
+              lyricsElement.appendChild(charElement); 
+
+              await new Promise((resolve) => setTimeout(resolve, delay));
+
+              
+              charElement.style.animation = "";
+          }
+
+          lyricsElement.appendChild(document.createElement("br")); 
+
+          await new Promise((resolve) => setTimeout(resolve, delay * 25));
+
+          lyricsElement.textContent = "";
+
+          await new Promise((resolve) => setTimeout(resolve, delay * 35));
+      }
+
+      setTimeout(function () {
+          window.location.href = "yournexthtmlfile.html"; 
+      }, 700);
+  }
+  
+  displayLyrics();
+});
+
+
+
+function makeDraggable(selector) {
+            const element = document.querySelector(selector);
+            let offsetX, offsetY, isDragging = false;
+
+            function startDrag(e) {
+                e.preventDefault();
+                isDragging = true;
+                let touch = e.touches ? e.touches[0] : e;
+                offsetX = touch.clientX - element.offsetLeft;
+                offsetY = touch.clientY - element.offsetTop;
+            }
+
+            function moveDrag(e) {
+                if (!isDragging) return;
+                e.preventDefault();
+                let touch = e.touches ? e.touches[0] : e;
+                element.style.left = `${touch.clientX - offsetX}px`;
+                element.style.top = `${touch.clientY - offsetY}px`;
+            }
+
+            function stopDrag() {
+                isDragging = false;
+            }
+
+            element.addEventListener('mousedown', startDrag);
+            element.addEventListener('mousemove', moveDrag);
+            element.addEventListener('mouseup', stopDrag);
+            element.addEventListener('mouseleave', stopDrag);
+
+            element.addEventListener('touchstart', startDrag, { passive: false });
+            element.addEventListener('touchmove', moveDrag, { passive: false });
+            element.addEventListener('touchend', stopDrag);
+        }
+
+        // Aktifkan drag pada kedua gambar dengan class berbeda
+        makeDraggable('.draggable');
+        makeDraggable('.draggable2');
+        makeDraggable('.draggable3');
+        makeDraggable('.draggable4');
+        
+  document.addEventListener("click", function() {
+            document.getElementById("background-music").play();
+        });
+        
+  </script>
+</body>
+</html>
