@@ -11,18 +11,19 @@
   body {
       margin: 0;
       overflow: hidden;
- 
     }
 
-    video {
+  
+   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+   video {
       position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-    
-            width: 100vw;
-            height: 100vh;
-            object-fit: cover;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
     }
     
     content {
@@ -30,105 +31,61 @@
     }
     
   
-
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&family=Rubik:wght@300;400;500;600;700;800&display=swap');
-.draggable p {
-            font-size: 16px;
-            color: #333;
-            margin-top: 5px;
-        }
+    .draggable p, .draggable2 p, .draggable3 p, .draggable4 p{
+      font-size: 16px;
+      color: #333;
+      margin-top: 5px;
+    }
 
 
 
-.draggable{
+    .draggable {
+       background-color: rgb(234, 229, 229);
+       top: 30%;
+       left: 40%;
+       padding: 8px 10px;
+       box-shadow: 1px 15px 20px 0px rgba(0,0,0,0.5);
+       position: fixed;
+       border-radius: 20px;
+       text-align: center;
+       rotate: 3deg;
+    }
 
-  background-color: rgb(234, 229, 229);
-  top: 30%;
-  left: 40%;
-  padding: 8px 10px;
-  
-  box-shadow: 1px 15px 20px 0px rgba(0,0,0,0.5);
-  position: fixed;
-  border-radius: 20px;
-  text-align: center;
-  rotate: 3deg;
-}
+    .draggable2 {
+       background-color: rgb(234, 229, 229);
+       top: 30%;
+       left: 40%;
+       padding: 8px 10px;
+       rotate: -5deg;
+       box-shadow: 1px 15px 20px 0px rgba(0,0,0,0.5);
+       position: fixed;
+       border-radius: 20px;
+       text-align: center;
+    }
 
-.draggable2 p {
+    .draggable3 {
+       background-color: rgb(234, 229, 229);
+       top: 30%;
+       left: 40%;
+       padding: 8px 10px;
+       rotate: 5deg;
+       box-shadow: 1px 15px 20px 0px rgba(0,0,0,0.5);
+       position: fixed;
+       border-radius: 20px;
+       text-align: center;
+    }
 
-            font-size: 16px;
-
-            color: #333;
-            margin-top: 5px;
-        }
-
-
-
-.draggable2 {
-
-  background-color: rgb(234, 229, 229);
-  top: 30%;
-  left: 40%;
-  padding: 8px 10px;
-  rotate: -5deg;
-  box-shadow: 1px 15px 20px 0px rgba(0,0,0,0.5);
-  position: fixed;
-  border-radius: 20px;
-  text-align: center;
-}
-
-
-.draggable3 p {
-
-
-
-            font-size: 16px;
-
-            color: #333;
-            margin-top: 5px;
-        }
-
-
-
-.draggable3 {
-
-  background-color: rgb(234, 229, 229);
-  top: 30%;
-  left: 40%;
-  padding: 8px 10px;
-  rotate: 5deg;
-  box-shadow: 1px 15px 20px 0px rgba(0,0,0,0.5);
-  position: fixed;
-  border-radius: 20px;
-  text-align: center;
-}
-
-.draggable4 p {
-
-
-
-
-
-            font-size: 16px;
-
-            color: #333;
-            margin-top: 5px;
-        }
-
-
-
-.draggable4 {
-
-  background-color: rgb(234, 229, 229);
-  top: 30%;
-  left: 40%;
-  padding: 8px 10px;
-  rotate: -3deg;
-  box-shadow: 1px 15px 20px 0px rgba(0,0,0,0.5);
-  position: fixed;
-  border-radius: 20px;
-  text-align: center;
-}
+    .draggable4 {
+       background-color: rgb(234, 229, 229);
+       top: 30%;
+       left: 40%;
+       padding: 8px 10px;
+       rotate: -3deg;
+       box-shadow: 1px 15px 20px 0px rgba(0,0,0,0.5);
+       position: fixed;
+       border-radius: 20px;
+       text-align: center;
+    }
 
 
 .content {
@@ -138,12 +95,13 @@
   transform: translate(-50%, -50%);
   z-index: 1;
   text-align: center;
-  color: #fff; /* Warna teks */
+  color: #fff; 
 }
 
 .paper.image {
   padding: 2px;
 }
+  
 .paper.image p {
   font-size: 2px;
 }
@@ -153,6 +111,7 @@ img {
   width: 100%;
   user-select: none;
 }
+  
 @keyframes glow {
   0%, 100% {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00e0, 0 0 70px #ff00e0, 0 0 80px #ff00e0, 0 0 100px #ff00e0, 0 0 150px #ff00e0;
@@ -188,51 +147,47 @@ p {
 <body>
   
 <video class="video-background" autoplay loop muted >
-        <source src="gokil.mp4" type="video/mp4">
-    </video>
+    <source src="gokil.mp4" type="video/mp4">
+</video>
     
   <div id="lyrics"></div>
   <div class="content">
     <h1></h1>
-    
   </div>
     
 <audio id="background-music" autoplay loop>
-        <source src="1.mp3" type="audio/mpeg">
-    </audio>
+    <source src="1.mp3" type="audio/mpeg">
+</audio>
 
-
-
-  <div class="draggable">
+  
+ <div class="draggable">
         <img src="IMG3.jpg" alt="Gambar">
         <p>Ini Kitaaa</p>
-    </div>
+ </div>
 
-   <div class="draggable2" >
+  
+ <div class="draggable2" >
         <img src="IMG2.jpg" alt="Gambar">
         <p>Ini Lucuuuu</p>
-    </div>
-    
-<div class="draggable3" >
+ </div>
+
+  
+ <div class="draggable3" >
         <img src="IMG1.jpg" alt="Gambar">
         <p>Ini Cantikkkk</p>
-    </div>
+ </div>
 
-<div class="draggable4" >
+ <div class="draggable4" >
         <img src="IMG4.jpg" alt="Gambar">
         <p>Ini Manissss</p>
-    </div>
+ </div>
+
 
 </body>
-
-  <script>
-    
-    
-
-let highestZ = 1;
-
-
-document.addEventListener("DOMContentLoaded", function () {
+   <script>
+  let highestZ = 1
+  
+  document.addEventListener("DOMContentLoaded", function () {
   const lyrics = [
     "",
     "",
@@ -329,7 +284,7 @@ function makeDraggable(selector) {
         makeDraggable('.draggable3');
         makeDraggable('.draggable4');
         
-  document.addEventListener("click", function() {
+        document.addEventListener("click", function() {
             document.getElementById("background-music").play();
         });
         
