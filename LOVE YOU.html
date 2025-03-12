@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet">
+    <title>Always</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        
+        html, body {
+            overflow: hidden;
+            height: 100%;
+        }
+
+        body {
+            background-image: linear-gradient(to bottom right, #FD6BA4, #DB3274);
+            color: white;
+            position: relative;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            position: relative;
+            z-index: 1;
+        }
+
+        .photo {
+            width: 220px;
+            height: 220px;
+            border-radius: 10px;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 10px;
+            margin-top: -0px;
+        }
+
+        .title {
+          font-family: "Mea Culpa", cursive;
+            font-size: 45px;
+            font-style: normal;
+          word-spacing: 10px;
+          margin-bottom: 10px;
+            
+        }
+
+
+        .subtitle {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .content {
+            display: inline-block; 
+            background-color: white;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 18px;
+            max-width: 90%; 
+            white-space: nowrap; 
+        }
+        
+        .j {
+          margin-bottom: 15px;
+        }
+        
+.harapan {
+  display: inline-block; 
+            background-color: white;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 12px;
+            max-width: 90%; 
+            text-align: justify;
+            font-family: "Sour Gummy", sans-serif;
+            
+}
+      
+        .love {
+            position: absolute;
+            bottom: -10px;
+            animation: floatUp 5s linear infinite;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="photo" style="background-image: url('IMGMU.jpg');"></div>
+        <h6 class="title">Haffidh & Desvia</h1>
+        <div class="harapan">
+          "Semoga kitaa dapat menjalani hubungan kita sampai hubungan yang benar benar serius dan sahh🤍,, akuu pengen kitaa bahagia bersama kitaa bisaa saling cerita satu sama lainnn,, kitaa bahagia bersama dan saling mencintai dan menyayangi untuk selamy,, akuu jugaa berharap tidak adaa yang berusaha ngerusak hubungan kitaaa iniii,,, akuu nggak mauu kehilangan kamuu Karena kamuu segalanya bagiku,, intinya akuu ingin hubungan kitaaa inii abadi untuk selamanya,, akuu selalu berusaha dan berdoa agarr kitaa dapat menjalani hubungan kita ini selamanyaaa,, akuu harapp kamu jugaa bahagia bersama kuu sayanggkuuu,, Terimakasih sayanggkuuu,, I Loveee youuuu 🤍🤍💗💗" -Haffidh
+          <p class="j"></p>
+          <p>
+            "semoga kita akan terus menjadii KITA🫂, di berikann kebahagiaan di setiapp harinyaaa , langgeng terusss kalo bisaa sampe apa?? YA SAMPE NIKAHHHH LAHHHH *AAMIIN😩💗 aku juga berharap semoga di hubungan kita gabakal ada yang namanya  orang ketiga atau HAMA🤬 jauhkanlahh YaAllah😭😭 hush hushhhh... dan berikanlahhh pacarr ku yang sangattt imut kiyut dan juga lucu ii kesabaran seluas samudra biarrrr bisa ngadepin aku yang tantrum an ini😈🫰🏻 BWHAHAHJHA , intinyaaa aku mau yang terbaik dihubungan kita ini ayyy di jauhkan dari yang ga baikkk👣  -Desvia
+          </p>
+        </div>
+    </div>
+
+    
+    <audio id="background-music" loop>
+        <source src="2.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        function createLove() {
+            const love = document.createElement("div");
+            love.classList.add("love");
+
+          
+            const loveTypes = ["❤️", "💖", "💜", "💕", "💙", "💘", "🩷", "🤍"];
+            love.innerHTML = loveTypes[Math.floor(Math.random() * loveTypes.length)];
+
+            
+            love.style.left = Math.random() * window.innerWidth + "px";
+
+        
+            const size = Math.random() * 30 + 20; 
+            love.style.fontSize = size + "px";
+
+            
+            love.style.animationDuration = (Math.random() * 3 + 4) + "s";
+
+            
+            document.body.appendChild(love);
+
+            
+            setTimeout(() => {
+                love.remove();
+            }, 7000);
+        }
+
+        
+        setInterval(createLove, 300);
+
+        
+        document.addEventListener("DOMContentLoaded", () => {
+            const audio = document.getElementById("background-music");
+            audio.play().catch(() => {
+                console.log("Autoplay dicegah oleh browser, pengguna harus berinteraksi.");
+            });
+        });
+    </script>
+</body>
+</html>
